@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1781294331607-u64n6uy",
+    "usuarioId": 1,
+    "prestante": "Daniel Primo",
+    "monto": 30000,
+    "intereses": 0,
+    "fechaVencimiento": "2026-07-01",
+    "cuotas": 1,
+    "cuotasPagadas": 0
+  },
+  {
+    "id": "1781294368783-8qepoby",
+    "usuarioId": 1,
+    "prestante": "Rubiela Patricia Gonzalez Jaimes",
+    "monto": 100000,
+    "intereses": 5,
+    "fechaVencimiento": "2026-06-15",
+    "cuotas": 1,
+    "cuotasPagadas": 0
+  },
+  {
+    "id": "1781294394960-e096345",
+    "usuarioId": 1,
+    "prestante": "Juan Chanaga",
+    "monto": 11000,
+    "intereses": 0,
+    "fechaVencimiento": "2026-07-01",
+    "cuotas": 1,
+    "cuotasPagadas": 0
+  },
+  {
+    "id": "1781539575036-nvtxswf",
+    "usuarioId": 1,
+    "prestante": "Suegra",
+    "monto": 30000,
+    "intereses": 0,
+    "fechaVencimiento": "2026-12-12",
+    "cuotas": 1,
+    "cuotasPagadas": 0
+  },
+  {
+    "id": "1781973051016-dja8m7v",
+    "usuarioId": 1,
+    "prestante": "Maria Del Carmen Jaimes Jaimes",
+    "monto": 20000,
+    "intereses": 0,
+    "fechaVencimiento": "2026-07-01",
+    "cuotas": 1,
+    "cuotasPagadas": 0
+  }
+]
