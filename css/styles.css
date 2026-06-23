@@ -1209,21 +1209,78 @@ a:hover {
   inset: 0;
   z-index: 300;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  text-align: center;
-  background: var(--bg);
+  padding: 1rem;
+  padding: max(1rem, env(safe-area-inset-top, 0px))
+    max(1rem, env(safe-area-inset-right, 0px))
+    max(1rem, env(safe-area-inset-bottom, 0px))
+    max(1rem, env(safe-area-inset-left, 0px));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.25), transparent),
+    var(--bg);
 }
 
+.panel-carpeta__card {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem 1.5rem;
+}
+
+.panel-carpeta__header {
+  text-align: center;
+}
+
+.panel-carpeta__header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.panel-carpeta__body {
+  margin-top: 0.85rem;
+  text-align: center;
+}
+
+.panel-carpeta p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.panel-carpeta p:last-child {
+  margin-bottom: 0;
+}
+
+.panel-carpeta__actions {
+  margin-top: 1.25rem;
+}
+
+.panel-carpeta code {
+  font-size: 0.82rem;
+  background: var(--bg);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  word-break: break-all;
+}
 .aviso-solo-lectura {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 0.75rem 1rem;
-  padding: 0.65rem 1.25rem;
+  padding: 0.65rem 1rem;
   background: rgba(245, 158, 11, 0.12);
   border-bottom: 1px solid rgba(245, 158, 11, 0.35);
   font-size: 0.85rem;
@@ -1232,6 +1289,11 @@ a:hover {
 
 .aviso-solo-lectura p {
   margin: 0;
+  flex: 1 1 12rem;
+  min-width: 0;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .aviso-solo-lectura code {
@@ -1239,25 +1301,7 @@ a:hover {
   background: var(--bg-card);
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
-}
-
-.panel-carpeta h2 {
-  font-size: 1.35rem;
-  margin-bottom: 0.75rem;
-}
-
-.panel-carpeta p {
-  color: var(--text-muted);
-  max-width: 400px;
-  line-height: 1.55;
-  margin-bottom: 1.25rem;
-}
-
-.panel-carpeta code {
-  font-size: 0.85rem;
-  background: var(--bg-card);
-  padding: 0.1rem 0.35rem;
-  border-radius: 4px;
+  word-break: break-all;
 }
 
 /* Empty state */
@@ -1568,12 +1612,27 @@ a:hover {
   }
 
   .panel-carpeta {
-    padding: 1.25rem;
+    align-items: flex-start;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .panel-carpeta__card {
+    padding: 1.25rem 1rem;
+  }
+
+  .panel-carpeta__header h2 {
+    font-size: 1.2rem;
   }
 
   .aviso-solo-lectura {
     flex-direction: column;
     text-align: center;
+    padding: 0.75rem 1rem;
+  }
+
+  .aviso-solo-lectura .btn {
+    width: 100%;
   }
 }
 

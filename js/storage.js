@@ -268,14 +268,28 @@ function mostrarPanelCarpeta(navegadorViejo) {
   panel.id = 'panel-carpeta';
   panel.className = 'panel-carpeta';
   panel.innerHTML = navegadorViejo
-    ? '<h2>Navegador no compatible</h2><p>Usa Chrome o Edge para guardar en archivos .json</p>'
+    ? `
+    <div class="panel-carpeta__card">
+      <header class="panel-carpeta__header">
+        <h2>Navegador no compatible</h2>
+      </header>
+      <div class="panel-carpeta__body">
+        <p>Usa Chrome o Edge para guardar en archivos .json</p>
+      </div>
+    </div>`
     : `
-    <h2>Conectar datos</h2>
-    <p>No se pudo cargar la carpeta <code>data/</code> automáticamente.</p>
-    <p>Selecciona la carpeta del proyecto (donde está <code>index.html</code>)<br>
-    o directamente la carpeta <code>data</code>.</p>
-    <button type="button" class="btn btn--primary" id="btn-elegir-carpeta">Seleccionar carpeta</button>
-  `;
+    <div class="panel-carpeta__card">
+      <header class="panel-carpeta__header">
+        <h2>Conectar datos</h2>
+      </header>
+      <div class="panel-carpeta__body">
+        <p>No se pudo cargar la carpeta <code>data/</code> automáticamente.</p>
+        <p>Selecciona la carpeta del proyecto (donde está <code>index.html</code>) o directamente la carpeta <code>data</code>.</p>
+      </div>
+      <div class="panel-carpeta__actions">
+        <button type="button" class="btn btn--primary btn--block" id="btn-elegir-carpeta">Seleccionar carpeta</button>
+      </div>
+    </div>`;
   document.body.prepend(panel);
 
   if (!navegadorViejo) {
